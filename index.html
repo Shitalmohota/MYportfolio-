@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Full Stack Developer portfolio showcasing projects, skills, and experience. Expert in React, Node.js, MongoDB, and modern web technologies.">
+  <meta name="keywords" content="Full Stack Developer, Portfolio, React, Node.js, Web Developer">
+  <meta name="author" content="Shital Mohota">
+  <title>Shital Mohota | Full Stack Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader">
+    <div class="loader-content">
+      <div class="loader-spinner"></div>
+      <div class="loader-text">Loading</div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <!-- SVG Gradient Definition -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="skillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#7b5ea7"/>
+        <stop offset="100%" stop-color="#5b8dee"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;SM/&gt;</a>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#progress">Progress</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span>🌙</span></button>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content reveal">
+      <span class="hero-badge">👋 Welcome to my portfolio</span>
+      <h1>Hi, I'm <span class="gradient-text">Shital Mohota</span></h1>
+      <div class="typing-wrapper">
+        <span id="typing-text"></span><span class="typing-cursor">|</span>
+      </div>
+      <p>IT student at Walchand Institute of Technology, Solapur. Passionate about full-stack web development, problem-solving, and building impactful digital experiences.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">✉ Hire Me</a>
+      </div>
+    </div>
+    <div class="hero-image"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>About Me</h2>
+        <p>Discover who I am and what drives me</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-wrap reveal">
+          <div class="about-image-bg"></div>
+          <div class="about-image-placeholder">👨‍💻</div>
+        </div>
+        <div class="about-info reveal">
+          <h3>A passionate developer crafting digital experiences</h3>
+          <p>I'm pursuing Information Technology at Walchand Institute of Technology, Solapur (CGPA: 8.4). I specialize in full-stack web development using the MERN stack and love building real-world applications with clean, scalable code.</p>
+          <p>When I'm not coding, you'll find me solving problems, watching English podcasts, contributing to open source, or exploring new web technologies. I bring strong leadership, communication, and adaptability to every project.</p>
+          <div class="about-cards">
+            <div class="about-card">
+              <div class="card-number">8.4</div>
+              <div class="card-label">CGPA</div>
+            </div>
+            <div class="about-card">
+              <div class="card-number">5+</div>
+              <div class="card-label">Projects Done</div>
+            </div>
+            <div class="about-card">
+              <div class="card-number">2</div>
+              <div class="card-label">Certifications</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Technical Skills</h2>
+        <p>Technologies I work with daily</p>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-card" data-percent="85">
+          <div class="skill-icon">☕</div>
+          <div class="skill-name">Java</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">85%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="90">
+          <div class="skill-icon">📜</div>
+          <div class="skill-name">JavaScript</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">90%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="80">
+          <div class="skill-icon">🐍</div>
+          <div class="skill-name">Python</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">80%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="78">
+          <div class="skill-icon">🔵</div>
+          <div class="skill-name">C</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">78%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="76">
+          <div class="skill-icon">⚙️</div>
+          <div class="skill-name">C++</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">76%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="88">
+          <div class="skill-icon">⚛️</div>
+          <div class="skill-name">React</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">88%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="85">
+          <div class="skill-icon">🟢</div>
+          <div class="skill-name">Node.js</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">85%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="82">
+          <div class="skill-icon">🚀</div>
+          <div class="skill-name">Express JS</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">82%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="83">
+          <div class="skill-icon">🍃</div>
+          <div class="skill-name">MongoDB</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">83%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="80">
+          <div class="skill-icon">🗄️</div>
+          <div class="skill-name">SQL</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">80%</div>
+          </div>
+        </div>
+        <div class="skill-card" data-percent="84">
+          <div class="skill-icon">🔀</div>
+          <div class="skill-name">Git/GitHub</div>
+          <div class="skill-ring">
+            <svg width="70" height="70"><circle class="ring-bg" cx="35" cy="35" r="30"/><circle class="ring-fill" cx="35" cy="35" r="30"/></svg>
+            <div class="skill-percent">84%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Featured Projects</h2>
+        <p>Some of my recent work</p>
+      </div>
+      <div class="filter-btns reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="react">React</button>
+        <button class="filter-btn" data-filter="node">Node.js</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal" data-tags="fullstack,node">
+          <div class="project-img">
+            <img data-src="assets/images/project-dashboard.png" alt="Wanderlust Rental Platform" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3>Wanderlust – Airbnb-Style Rental Platform</h3>
+            <p>Full-stack web app for listing, booking, and reviewing short-term rentals. Features user authentication, search & filter, booking system with real-time availability, and RESTful APIs.</p>
+            <div class="project-tags"><span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST API</span></div>
+            <div class="project-links">
+              <a href="#" class="demo-link">Live Demo</a>
+              <a href="https://github.com/Shitalmohota" class="github-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal" data-tags="react,fullstack,node">
+          <div class="project-img">
+            <img data-src="assets/images/project-ecommerce.png" alt="Food Delivery App" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" loading="lazy">
+          </div>
+          <div class="project-body">
+            <h3>Food Delivery Web App</h3>
+            <p>Fully responsive food delivery app with dynamic restaurant & menu pages, secure payment integration (UPI/Stripe/Razorpay), and real-time order tracking from Placed to Delivered.</p>
+            <div class="project-tags"><span>React.js</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+            <div class="project-links">
+              <a href="#" class="demo-link">Live Demo</a>
+              <a href="https://github.com/Shitalmohota" class="github-link" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience / Timeline -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Experience & Journey</h2>
+        <p>My professional timeline</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="date">2024 – 2027</div>
+            <h3>B.Tech Information Technology</h3>
+            <h4>Walchand Institute of Technology, Solapur</h4>
+            <p>CGPA: 8.4 — Focused on web development, data structures, algorithms, and full-stack technologies.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="date">2022 – 2023</div>
+            <h3>HSC (Class XII)</h3>
+            <h4>G.B.M.M. Jr College, Hinganghat</h4>
+            <p>Percentage: 69% — Completed higher secondary education with focus on science stream.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="date">2020 – 2021</div>
+            <h3>SSC (Class X)</h3>
+            <h4>Bansilal Katariya High School, Hinganghat</h4>
+            <p>Percentage: 75% — Completed secondary education with strong academic foundation.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="date">Certification</div>
+            <h3>1M1B Green Skills Academy</h3>
+            <h4>Internship Certificate</h4>
+            <p>Completed internship program focused on sustainability, green skills, and employability development.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="date">Certification</div>
+            <h3>Certified Web Developer</h3>
+            <h4>Apna College</h4>
+            <p>Completed a comprehensive web development certification with hands-on project experience.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Tracker -->
+  <section id="progress" class="progress-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Progress Tracker</h2>
+        <p>My coding journey and growth</p>
+      </div>
+      <div class="contrib-graph reveal">
+        <h3>📊 Contribution Activity</h3>
+        <div class="contrib-grid"></div>
+      </div>
+      <div class="journey-cards">
+        <div class="journey-card reveal">
+          <div class="journey-icon">🎯</div>
+          <h4>Frontend Mastery</h4>
+          <p>React, Next.js, TypeScript, and modern CSS frameworks</p>
+          <div class="journey-bar"><div class="journey-fill" data-width="92%"></div></div>
+        </div>
+        <div class="journey-card reveal">
+          <div class="journey-icon">⚡</div>
+          <h4>Backend Development</h4>
+          <p>Node.js, Express, REST APIs, GraphQL, microservices</p>
+          <div class="journey-bar"><div class="journey-fill" data-width="85%"></div></div>
+        </div>
+        <div class="journey-card reveal">
+          <div class="journey-icon">🗄️</div>
+          <h4>Database & DevOps</h4>
+          <p>MongoDB, PostgreSQL, Docker, Kubernetes, AWS</p>
+          <div class="journey-bar"><div class="journey-fill" data-width="78%"></div></div>
+        </div>
+        <div class="journey-card reveal">
+          <div class="journey-icon">🤖</div>
+          <h4>AI & Machine Learning</h4>
+          <p>Python, TensorFlow, NLP, computer vision basics</p>
+          <div class="journey-bar"><div class="journey-fill" data-width="65%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Get In Touch</h2>
+        <p>Let's work together on your next project</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's connect and create something amazing</h3>
+          <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out!</p>
+          <div class="contact-detail">
+            <div class="icon">📧</div>
+            <span>yashmohota@gmail.com</span>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">📍</div>
+            <span>India</span>
+          </div>
+          <div class="contact-detail">
+            <div class="icon">📱</div>
+            <span>+91 9403554699</span>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <label for="formName">Your Name</label>
+            <input type="text" id="formName" placeholder="John Doe">
+            <div class="error-msg">Please enter at least 2 characters</div>
+          </div>
+          <div class="form-group">
+            <label for="formEmail">Email Address</label>
+            <input type="email" id="formEmail" placeholder="john@example.com">
+            <div class="error-msg">Please enter a valid email address</div>
+          </div>
+          <div class="form-group">
+            <label for="formMessage">Message</label>
+            <textarea id="formMessage" placeholder="Tell me about your project..."></textarea>
+            <div class="error-msg">Please enter at least 10 characters</div>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message ✨</button>
+          <div class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/shital-mohota-5918b4305/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://github.com/Shitalmohota" target="_blank" rel="noopener" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="mailto:yashmohota@gmail.com" aria-label="Email">📧</a>
+    </div>
+    <p>© 2026 Shital Mohota. Crafted with passion & code.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
